@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daraz</title>
+    <link rel="shortcut icon" href="Images/TB1eMCUrgZC2uNjSZFnXXaxZpXa.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -14,10 +15,45 @@
             background-color: #f5f5f5;
         }
 
+        .show-header{
+            position: fixed;
+            z-index: 500;
+            display: block;
+            box-shadow: 0 2px 8px 0 rgba(58, 58, 58, .5) ;
+            background-color: #fff;
+           
+            width: 100%;
+            /* transition: all 1s ease; */
+            animation: fade 2s;
+            
+        }
+        @keyframes fade {
+            from{opacity: 0;}
+            to{opacity: 1;}
+            
+        }
+        .show{
+            display: block;
+            animation: fade 2s;
+        }
+        .hide{
+            opacity: 1;
+            animation: fadeOut .2s;
+            display: none;
+        }
+        
+        @keyframes fadeOut {
+            from{opacity: 1;}
+            to{opacity: 0;}
+            
+        }
+        #header{
+            background-color: #fff;
+        }
         /* head section */
         .head {
             /* background-color: #e7e8ec; */
-            background-color: rgba(158, 158, 158, .2);
+            background-color: rgba(158, 158, 158, .3)  !important;
             height: 25px;
             margin:  0px;
             /* padding: 1px 1px; */
@@ -132,6 +168,59 @@
             height: 45px;
         }
 
+        .nav-2 {
+            background-color: #fff;
+            /* justify-content: center;
+            display: flex; */
+            
+        }
+        .nav-2 ul {
+            display: flex;
+            /* 
+             margin-top: -1%;
+            margin-right: 5%; */
+            /* background-color: tomato; */
+            /* justify-content: center; */
+            /* margin-left: -3% !important; */
+            width: 89%;
+            margin: 0 auto;
+           
+        }
+
+        .nav-2 ul li {
+            list-style-type: none;
+            /* background-color: #fff; */
+            padding: 5px 5px;
+            margin: 0px 5px;
+            /* border: 1px solid #fff;
+            border-radius: 22px; */
+            display: flex;
+
+            height: 32px;
+        }
+
+        .nav-2 ul li a {
+            text-decoration: none;
+            font-size: 14px;
+            /* width: 180px; */
+            margin: 8px 8px;
+            color: #666;
+            display: block;
+            font-weight: 500 !important;
+            
+        }
+        .nav-2  ul li a .fa-angle-down{
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 10px;
+        } 
+        .nav-2 ul .link a{
+            margin-left: 1px;
+            margin-right: 40px;
+            padding-right: 45px;
+            font-weight: bold;
+        }
+  
         /* slider */
         .slider {
             height: 400px;

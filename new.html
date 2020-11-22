@@ -1159,21 +1159,21 @@
         }
     </style>
 </head>
-<body>
-    <div class="head">
-        <ul>
-            <li><a href="" class="save"> SAVE MORE ON APP</a></li>
-            <li><a href=""> DARAZ AFFILIATE PROGRAM </a></li>
-            <li><a href=""> SELL ON DARAZ </a></li>
-            <li><a href=""> CUSTOMER CARE</a></li>
-            <li><a href=""> TRACK MY ORDER</a></li>
-            <li><a href=""> LOGIN</a></li>
-            <li><a href=""> SIGN UP</a></li>
-        </ul>
-    </div>
-
-    <!-- 2nd DIV -->
-    <div class="nav">
+<body onscroll="scroller()">
+    <header id="header">
+        <div class="head show" id="head">
+            <ul>
+                <li><a href="" class="save"> SAVE MORE ON APP</a></li>
+                <li><a href=""> DARAZ AFFILIATE PROGRAM </a></li>
+                <li><a href=""> SELL ON DARAZ </a></li>
+                <li><a href=""> CUSTOMER CARE</a></li>
+                <li><a href=""> TRACK MY ORDER</a></li>
+                <li><a href=""> LOGIN</a></li>
+                <li><a href=""> SIGN UP</a></li>
+            </ul>
+        </div>
+    
+    <div class="nav" id="nav1">
         <a href="" class="logo"><img src="Images/TB1F29NfwZC2uNjSZFnXXaxZpXa.png" alt=""></a>
         <ul>
             <li>
@@ -1197,6 +1197,18 @@
         </a>
     </div>
 
+    <div class="nav-2 hide" id="nav2">
+        <ul>
+            <li class="link"><a href="">Categories <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+            
+                <li><img src="Images/nav1.JPG" alt=""><a href="" class="i"> DarazMall </a></li>
+                <li><img src="Images/nav2.JPG" alt=""><a href="" class="ii">dMart </a></li>
+                <li><img src="Images/nav3.JPG" alt=""><a href="" class="iii">Fashion & Lifestyle </a></li>
+                <li><img src="Images/nav4.JPG" alt=""><a href="" class="iv">Global Collection </a></li>
+                <li><img src="Images/naav5.JPG" alt=""><a href="" class="v">Digital Sahulat </a></li>
+                    </ul>
+    </div>
+</header>
     <!-- Slider Div -->
     <div class="slider">
         <ul class="list">
@@ -2582,6 +2594,45 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function scroller(){
+            var header = document.getElementById('header');
+            var head = document.getElementById('head');
+            var nav2 = document.getElementById('nav2');
+            if(window.scrollY > 200 && window.scrollY <= 1000  ){
+                if(!(header.classList.contains('show-header'))){
+                    header.classList.add('show-header');
+                    
+    
+                }
+                if(head.classList.contains('hide')){
+                    head.classList.remove('hide');
+                    head.classList.add('show');
+                }
+    
+            }
+            else if(window.scrollY >1000){
+                if(head.classList.contains('show')){
+                    head.classList.remove('show');
+                    head.classList.add('hide');
+                }
+                
+                if(nav2.classList.contains('hide')){
+                    nav2.classList.remove('hide');
+                    nav2.classList.add('show');
+                }
+            }
+            else{
+                header.classList.remove('show-header');
+                head.classList.add('show');
+                    head.classList.remove('hide')
+                    nav2.classList.remove('show');
+                    nav2.classList.add('hide');
+            }
+        }
+    </script>
+    
 </body>
 </html>
 
